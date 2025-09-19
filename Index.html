@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      line-height: 1.6;
+      background: #f9f9f9;
+    }
+    .container {
+      width: 100%;
+      max-width: 100%;
+      margin: auto;
+    }
+    header {
+      background: #ff02028a;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 15px 0;
+    }
+    .nav-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 80px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: black;
+      font-weight: 600;
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      transition: color 0.3s ease;
+    }
+    .nav-links li a {
+      transition: 0.3s ease;
+    }
+    .nav-links li a:hover {
+      color: whitesmoke;
+      cursor: pointer;
+    }
+    .menu-icon img {
+      transition: transform 0.3s ease;
+    }
+    .menu-icon img:hover {
+      transform: scale(1.2);
+      cursor: pointer;
+    }
+
+    /* Section-hero */
+    .Content {
+      max-width: 100%;
+      display: flex;
+      flex-direction: row;
+      background: linear-gradient(to right, #fff9b0, #ffd6e0);
+    }
+
+    .Content-container {
+      width: 50%;
+      flex-direction: column;
+      display: flex;
+      gap: 50px;
+      padding: 10%;
+    }
+    .btn-primary {
+      border-radius: 12px;
+      color: #ffffff;
+      height: 50px;
+      width: 200px;
+      background: #ff02028a;
+      transition: background-color 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primary:hover {
+      transform: scale(1.1);
+    }
+    .Content-header {
+      font-family: Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      font-size: 35px;
+      font-weight: 600;
+    }
+    .paragraph {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 17px;
+    }
+    .Restaurant-food {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .Restaurant-food-head {
+      width: 50%;
+    }
+
+    .info {
+      background: linear-gradient(to right, #fff9b0, #ffd6e0);
+      max-width: 100%;
+      display: flex;
+      flex-direction: row;
+    }
+    .bottom-side-food-img {
+      gap: 10px;
+      padding: 10%;
+      width: 50%;
+      display: flex;
+      flex-direction: row;
+    }
+    .container-info-box {
+      padding: 15% 5% 5% 0%;
+      width: 50%;
+    }
+    .container-info-box .card {
+      padding: 5%;
+      background-color: #ff02028a;
+      width: 100%;
+      height: 250px;
+    }
+    .container-info-box .card h3 {
+      font-weight: 600;
+      font-size: 35px;
+    }
+    .Restaurant-two-image {
+      gap: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+    .font-family {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .click-me {
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      color: black;
+      transition: color 0.3s ease;
+    }
+    .click-me:hover {
+      color: #f26d6d;
+      cursor: pointer;
+    }
+
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Tablets */
+    @media (min-width: 600px) and (max-width: 1200px) {
+      .Content,
+      .info {
+        flex-direction: column;
+      }
+      .Content-container,
+      .Restaurant-food-head,
+      .bottom-side-food-img,
+      .container-info-box {
+        width: 100%;
+        padding: 5%;
+      }
+      .container-info-box .card {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    /* Mobile phones */
+    @media (max-width: 599px) {
+      .Content,
+      .info {
+        flex-direction: column;
+      }
+      .Content-container,
+      .Restaurant-food-head,
+      .bottom-side-food-img,
+      .container-info-box {
+        width: 100%;
+        padding: 5%;
+      }
+      .container-info-box .card {
+        width: 100%;
+        height: auto;
+      }
+      .nav-links {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .nav-links a {
+        font-size: 16px;
+      }
+      .btn-primary {
+        width: 100%;
+        max-width: 250px;
+        height: 45px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav-container">
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Order</a></li>
+          <li><a href="#">Food</a></li>
+          <li><a href="#">Restaurant</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li class="menu-icon">
+            <a href="#"><img style="height: 35px" src="menu-bar.png" alt="Menu" /></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="Content">
+    <div class="Content-container">
+      <h2 class="Content-header">Lorem ipsum</h2>
+      <p class="paragraph">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id est vitae dolor rhoncus tristique.
+        Maecenas metus quam, rhoncus euismod lorem in, sollicitudin viverra eros. Donec dictum luctus quam ut
+        tristique. Curabitur nec faucibus purus. congue sem nec justo mollis, in tincidunt erat pretium.
+        Sed pulvinar, massa ac porta viverra.
+      </p>
+      <button class="btn-primary font-family">Click Me</button>
+    </div>
+    <div class="Restaurant-food-head">
+      <img src="pexels-robin-stickel-70497.jpg" alt="Restaurant food" class="Restaurant-food" />
+    </div>
+  </section>
+
+  <section class="info">
+    <div class="bottom-side-food-img">
+      <div class="Restaurant-two-image">
+        <img
+          src="pexels-rachel-claire-6752433.jpg"
+          style="width: 200px; height: 200px"
+          alt="Restaurant"
+        />
+        <img
+          src="pexels-eva-bronzini-6141651.jpg"
+          style="width: 200px; height: 200px"
+          alt="Street Food"
+        />
+      </div>
+
+      <div>
+        <img
+          src="pexels-mister-mister-3434523.jpg"
+          style="width: 250px; height: 410px"
+          alt="Restaurant All-Foods"
+        />
+      </div>
+    </div>
+
+    <div class="container-info-box">
+      <div class="card">
+        <p class="paragraph">LOREM IPSUM</p>
+        <h3 class="font-family">LOREM IPSUM SET ADEMIR</h3>
+        <a href="#" class="click-me">
+          Click
+          <img
+            src="icons8-arrow-30.png"
+            style="width: 40px; height: 20px; margin-left: 8px"
+            alt="arrow"
+          />
+        </a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
